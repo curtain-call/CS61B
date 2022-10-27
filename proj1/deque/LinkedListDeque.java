@@ -36,14 +36,14 @@ public class LinkedListDeque<T> {
     //    双端队列
     int size;
     Node sentinel;
-//    哨兵不储存，只是提供一种指针，所以优化掉单独last指针的原因就是因为有时last指向sentinel，而sentinel的data是null
+
 
     public LinkedListDeque() {
         size = 0;
         sentinel = new Node();
         sentinel.next = sentinel;
         sentinel.prev = sentinel;
-//       问题：哨兵的data仍然是null
+
     }
 
     public void addFirst(T item) {

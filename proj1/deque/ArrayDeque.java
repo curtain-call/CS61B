@@ -20,11 +20,11 @@ public class ArrayDeque<T> implements Iterable<T> {
     private final int capacity;
 
     public ArrayDeque() {
-        this.adq = (T[]) new Object[8];
+        adq = (T[]) new Object[8];
         back = 0;
         front = 0;
         capacity = 8;
-//        索引可以用%capacity来控制
+//        circular可以用%capacity来控制
     }
 
     public ArrayDeque(int capacity) {
@@ -32,7 +32,7 @@ public class ArrayDeque<T> implements Iterable<T> {
         back = 0;
         front = 0;
         this.capacity = capacity;
-//        索引可以用%capacity来控制
+
     }
 
     public ArrayDeque(ArrayDeque<T> other) {
